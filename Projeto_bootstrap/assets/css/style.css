@@ -1,0 +1,100 @@
+body{
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+table td, table th {
+    border: 2px solid black;
+    margin: 10px 500px 0px 2px;
+
+}
+
+li{
+    display: inline-block; 
+    padding: 20px;   
+}
+
+input:hover {
+    color: blueviolet;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    }
+
+    form{
+    font-size: 16px;
+    background: #CCC;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 10px 10px 10px;
+    }
+
+    form h1{
+    color: #333
+    }
+
+    input, textarea{
+    width: 474px;
+    padding: 10px;
+    }
+
+    .enviar input {
+    background-color: rgb(110, 9, 110);
+    height: 45px;
+    width: 150px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;
+    color: rgb(179, 143, 143);
+    cursor: pointer;
+    }
+
+    .enviar input:hover {
+    background: rgb(131, 32, 131);
+    }
+
+    .nome input:hover, .email input:hover, .assunto input:hover, .mensagem textarea:hover{
+    border: 4px solid rgb(131, 32, 131);
+
+    }
+
+    textarea {
+    width: 474px;
+    height: 120px;
+    line-height: 20px;
+    }
+
+    .menu{
+        margin-left:3%;
+    }
+
+    li {
+        padding: 0px 77px;
+        font-size: 30px; 
+        text-transform: uppercase;
+              
+    } 
+
+    .menu li {
+        text-decoration-line: none;
+    }
+
+    
+   
+        
+
+
+
+
+
+
+
+
+
+
