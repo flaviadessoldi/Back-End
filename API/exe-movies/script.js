@@ -1,3 +1,4 @@
+const movies = document.querySelector('.movies');
 const button = document.querySelector('.btn-search-movie')
 button.addEventListener('click', (submit)=>{
 submit.preventDefault();
@@ -17,11 +18,10 @@ fetch('http://www.omdbapi.com/?s='+pesquisa+'&apikey=b5acaa9c')
     
     data.Search.forEach(filmes => {
         
-        const movies = document.querySelector('.movies');
-
         const box = document.createElement('div');
-        box.setAttribute('data-id', filmes.id);
-        
+        box.setAttribute('data-id', filmes.imdbID);
+        box.setAttribute('class', 'box');
+                
         movies.appendChild(box);
 
         const imagem = document.createElement('img');
@@ -34,19 +34,17 @@ fetch('http://www.omdbapi.com/?s='+pesquisa+'&apikey=b5acaa9c')
         boxDivider.setAttribute('class', 'box-divider');
         box.appendChild(boxDivider);
 
-        // const p = document.createElement('p');
-
-        const titulo = document.createElement('span');
-        titulo.textContent = filmes.Title
-        boxDivider.appendChild(titulo);
-
-        const ano = document.createElement('span');
-        ano.textContent = filmes.Year
-        boxDivider.appendChild(ano);
+        const infoFilme = document.createElement('p');
+        infoFilme.innerHTML = `<span>${filmes.Title}</span> <span>${filmes.Year}</span>`;
+        boxDivider.appendChild(infoFilme);
 
         const descricao = document.createElement('p');
-        descricao.textContent = filmes .Type;
+        descricao.innerHTML = `<span>${filmes.Type}</span>`;
         boxDivider.appendChild(descricao);
+
+        button.addEventListener('click', ()=>{
+            box.remove()
+        })
 
        
     });

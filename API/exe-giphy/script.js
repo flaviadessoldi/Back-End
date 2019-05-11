@@ -30,6 +30,10 @@ fetch('https://api.giphy.com/v1/stickers/search?q='+pesquisa+'&api_key=8NSYkECVi
 
         imagem.src = gifs.images.original.url;
 
+        button.addEventListener('click', ()=>{
+        box.remove()
+        })
+
        
     });
 
